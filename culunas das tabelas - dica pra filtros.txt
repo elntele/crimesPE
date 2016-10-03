@@ -1,0 +1,9 @@
+crime_id
+cidade
+data_ocorrencia
+idade
+nome_vitima
+objeto_utilizado
+qtd_vitimas
+sexo
+tipo_crime
