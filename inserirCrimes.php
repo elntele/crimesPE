@@ -38,16 +38,58 @@
 				    ?>
 				    </select>
 			    </div>
+
+			    <div class="form-group">	
+			    	<label>Data de ocorrência</label>
+			    	<input type="date" class="form-control" name="data" >
+			    </div>	
+
+			    <div class="form-group">	
+			    	<label>idade</label>
+			    	<input type="number" min="0" max="100" class="form-control" name="idade" placeholder="digite sua idade" >
+			    </div>	
+
+			     <div class="form-group">	
+			    	<label>nome</label>
+			    	<input type="text"  class="form-control" name="nome" placeholder="digite o nome da vítima" >
+			    </div>	
+
+			    <div class="form-group">	
+			    	<label>objeto utilizado</label><br> 
+			    	<select name="objeto">
+					    <option>ARMA DE FOGO</option >
+					    <option>ARMA BRANCA</option >
+					    <option>OUTRO TIPO DE OBJETO</option > 
+					    </select>
+					        
+			    </div>	
+
+			    <div class="form-group">	
+			    	<label>quantiadde de vitimas </label><br>
+			    	<input type="number" min="1" max="10000" class="form-control" name="qtd vitimas" placeholder="digite a quantidade de vítimas" >
+			    </div>	
+			    <div class="form-group">
+			      <label>sexo</label><br>	
+				  <input type="radio" name="gender" value="masculino" checked> masculino<br>
+				  <input type="radio" name="gender" value="feminino"> feminino<br>
+				</div>
+
+				<div class="form-group">	
+			    	<label>objeto utilizado</label> 
+			    	<select name="objeto">
+					        <option>ARMA DE FOGO</option >
+					        <option>ARMA BRANCA</option >
+					        <option>OUTRO TIPO DE OBJETO</option > 
+					        
+			    </div>	
+
+
+
+
+
     		</fieldset>
 
-    <!-- 		<div class="form-group">
-    			<label class="control-label">Cidade</label>
-    			<select type="text" name="cidade" class="form-control">
-    				<option value="">selecione a cidade</option>
-    		
-    		</div>
-     -->
-
+   
     	</form>
     </div>
   </div>
