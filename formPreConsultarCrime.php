@@ -1,11 +1,8 @@
-
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      header ('location:formConsultarCrime.php');
-     // header('Location: http://www.example.com/');
-    
+  
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      header('Location:formConsultarCrime.php');
   }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<div class="jumbotron">
 		  <h2>CONTROLE DE CONSULTA</h2>
 		  <p>selecione uma ou mais caracteristicas pelas quais você quer consultar o crime:</p>
-		    <form name = "form"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" >
+		    <form method="post" name="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return valida()">
 			    <div class="checkbox">
 			      <label><input type ="checkbox" name ="caracteristica" value ="cidade"> consultar por caracteristica</label>
 			    </div>
@@ -55,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			    <div class="container">
   					<div class="row">
     					<div class="col-sm-2"> 
-      						<button type="submit" value="andar" class="btn btn-primary" onclick = "valida()"> continuar</button>
+      						<input type="submit" value="continuar" class="btn btn-primary">
     					</div>
     					<div class=" col-sm-2"> </div>
     					<div class=" col-sm-2"> </div>
@@ -101,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</div>
 	</footer>
 
-	<script>
+<script >
 			function valida(){
 				
 				var vetor=[];
@@ -131,9 +128,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								} 
 
 						}
-				if (!chavecheckbox){
-					alert("escolha ao menos uma caracteristica");
-					return false;
+			if (chavecheckbox){
+				
+                  
+
+                  return true;
+
+			
+			}else{
+				alert("escolha ao menos uma caracteristica");
+						return false;
 				}
 
 			
