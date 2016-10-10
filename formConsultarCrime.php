@@ -14,12 +14,13 @@
   <div class="row">
     <div class="col-sm-6">
     	<div class="page-header text-center">
-    		<h2>Inserir Crimes</h2>
+    		<h2>Consultar Crimes</h2>
     	</div>
     	<form action="inserirCrimes.php" method="post" accept-charset="utf-8">
+    		
     		<fieldset>
     			<legend>Informações sobre o crime</legend>
-  	  			<div class="form-group">
+  	  			<div class="form-group" id="cidades" class ="hidden" >
   	  				<label class="control-label"> Cidades: </label>
   	  				<?php  
 					    $conn = new mysqli("localhost","root","","cvlipe");
@@ -40,5 +41,48 @@
 			    </div>
 			    </fieldset>
 			    </form>
+
+			    <div class= "form-group">
+			    	<label >digite o nome da vítima</label>
+			    	input<input type="text" name="nome_vitima">
+			    </div>
+			    <div class= "form-group">
+			    	<label >selecione a data de ocorrência</label>
+			    	<input type="date" name="data_ocorrencia">
+			    </div>
+			    <div class= "form-group">
+			    	<label >selecione a idade da vitima</label>
+			    	<input type="number" name="idade">
+			    </div>
+			      <div class="form-group">
+			      <label>sexo</label><br>	
+				  <input type="radio" name="sexo" value="masculino" checked> masculino<br>
+				  <input type="radio" name="sexo" value="feminino"> feminino<br>
+				</div>
+				<div class="form-group">	
+			    	<label>objeto utilizado</label><br> 
+			    	<select name="objeto_utilizado">
+					    <option>ARMA DE FOGO</option >
+					    <option>ARMA BRANCA</option >
+					    <option>OUTRO TIPO DE OBJETO</option > 
+					    </select>
+					        
+			    </div>	
+
+
+			   <div class="form-group">	
+			    	<label>tipo de crime</label> 
+			    	<select name="tipo_crime">
+					        <option>ASSALTO A MÃO ARMADA</option >
+					        <option>LATROCÍNIO</option >
+					        <option>HOMICIDIO</option > 
+					        <option>LESOES CORPORAIS SEGUIDA DE MORTE</option > <br>
+
+					        </select>
+			    </div>
+				<div class="form-group">	
+			    	<label>quantiadde de vitimas </label><br>
+			    	<input type="number" min="1" max="10000" class="form-control" name="qtd_vitimas" placeholder="digite a quantidade de vítimas" >
+			    </div>	
 </body>
 </html>

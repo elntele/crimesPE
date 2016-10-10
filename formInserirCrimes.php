@@ -75,7 +75,7 @@
 				</div>
 
 				<div class="form-group">	
-			    	<label>objeto utilizado</label> 
+			    	<label>tipode de crime</label> 
 			    	<select name="tipo_crime">
 					        <option>ASSALTO A MÃO ARMADA</option >
 					        <option>LATROCÍNIO</option >
