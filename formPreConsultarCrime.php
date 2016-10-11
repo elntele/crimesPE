@@ -23,30 +23,30 @@
 		<div class="jumbotron">
 		  <h2>CONTROLE DE CONSULTA</h2>
 		  <p>selecione uma ou mais caracteristicas pelas quais você quer consultar o crime:</p>
-		    <form method="post" name="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return valida()">
+		    <form method="post" name="form" action="formConsultarCrime.php" onsubmit="return valida()">
 			    <div class="checkbox">
-			      <label><input type ="checkbox" name ="caracteristica" value ="cidade"> consultar por caracteristica</label>
+			      <label><input type ="checkbox"  value ="cidade" name ="cidade"> consultar por cidade</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="nome_vitima" name="caracteristica">consultar por nome?</label>
+			      <label><input type="checkbox" value="nome_vitima" name="nome">consultar por nome?</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="data_ocorrencia" name="caracteristica">consultar por data de ocorrência?</label>
+			      <label><input type="checkbox" value="data_ocorrencia" name="ocorrencia">consultar por data de ocorrência?</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="idade"  name="caracteristica">consultar por idade?</label>
+			      <label><input type="checkbox" value="idade"  name="idade">consultar por idade?</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="sexo" name="caracteristica">consultar por sexo?</label>
+			      <label><input type="checkbox" value="sexo" name="sexo">consultar por sexo?</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="objeto_utilizado" name="caracteristica">consultar por objeto utilizado?</label>
+			      <label><input type="checkbox" value="objeto_utilizado" name="objeto">consultar por objeto utilizado?</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="tipo_crime" name="caracteristica"> consultar por tipo de crime?</label>
+			      <label><input type="checkbox" value="tipo_crime" name="tipo"> consultar por tipo de crime?</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="qtd_vitima" name="caracteristica">consultar por quantidade de vítimas?</label>
+			      <label><input type="checkbox" value="qtd_vitima" name="vitimas">consultar por quantidade de vítimas?</label>
 			    </div>
 			    
 			    <div class="container">
@@ -102,23 +102,24 @@
 			function valida(){
 				
 				var vetor=[];
-				var checkbox0 = document.form.caracteristica[0].checked;
+				var checkbox0 = document.form.cidade.checked;
 				vetor.push(checkbox0);
-				var checkbox1 = document.form.caracteristica[1].checked;
+				var checkbox1 = document.form.nome.checked;
 				vetor.push(checkbox1);
-				var checkbox2 = document.form.caracteristica[2].checked;
+				var checkbox2 = document.form.ocorrencia.checked;
 				vetor.push(checkbox2);
-				var checkbox3= document.form.caracteristica[3].checked;
+				var checkbox3= document.form.idade.checked;
 				vetor.push(checkbox3);
-				var checkbox4= document.form.caracteristica[4].checked;
+				var checkbox4= document.form.sexo.checked;
 				vetor.push(checkbox4);
-				var checkbox5 = document.form.caracteristica[5].checked;
+				var checkbox5 = document.form.objeto.checked;
 				vetor.push(checkbox5);
-				var checkbox6 = document.form.caracteristica[6].checked;
+				var checkbox6 = document.form.tipo.checked;
 				vetor.push(checkbox6);
-				var checkbox7 = document.form.caracteristica[7].checked;
+				var checkbox7 = document.form.vitimas.checked;
 				vetor.push(checkbox7);
 				var chavecheckbox= false;
+				
 				
 				
 				for (i=0;i<=7;i++){
