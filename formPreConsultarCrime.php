@@ -22,51 +22,45 @@
 	<div class="container">
 		<div class="jumbotron">
 		  <h2>CONTROLE DE CONSULTA</h2>
-		  <p>selecione uma ou mais caracteristicas pelas quais você quer consultar o crime:</p>
+		  <p>Selecione pelo menos uma das caracteristicas pelas quais você quer consultar o crime</p>
 		    <form method="post" name="form" action="formConsultarCrime.php" onsubmit="return valida()">
 			    <div class="checkbox">
-			      <label><input type ="checkbox"  value ="cidade" name ="cidade"> consultar por cidade</label>
+			      <label><input type ="checkbox"  value ="cidade" name ="cidade">Consultar por cidade</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="nome_vitima" name="nome">consultar por nome?</label>
+			      <label><input type="checkbox" value="nome_vitima" name="nome">Consultar por nome</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="data_ocorrencia" name="ocorrencia">consultar por data de ocorrência?</label>
+			      <label><input type="checkbox" value="data_ocorrencia" name="ocorrencia">Consultar por data de ocorrência</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="idade"  name="idade">consultar por idade?</label>
+			      <label><input type="checkbox" value="idade"  name="idade">Consultar por idade</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="sexo" name="sexo">consultar por sexo?</label>
+			      <label><input type="checkbox" value="sexo" name="sexo">Consultar por sexo</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="objeto_utilizado" name="objeto">consultar por objeto utilizado?</label>
+			      <label><input type="checkbox" value="objeto_utilizado" name="objeto">Consultar por objeto utilizado</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="tipo_crime" name="tipo"> consultar por tipo de crime?</label>
+			      <label><input type="checkbox" value="tipo_crime" name="tipo">Consultar por tipo de crime</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="qtd_vitima" name="vitimas">consultar por quantidade de vítimas?</label>
+			      <label><input type="checkbox" value="qtd_vitima" name="vitimas">Consultar por quantidade de vítimas</label>
 			    </div>
 			    
 			    <div class="container">
   					<div class="row">
-    					<div class="col-sm-2"> 
-      						<input type="submit" value="continuar" class="btn btn-primary">
+    					<div class="col-lg-1 col-md-1 col-sm-2 col-xs-1 text-left"> 
+      						<input type="submit" value="Continuar" class="btn btn-primary">
     					</div>
-    					<div class=" col-sm-2"> </div>
-    					<div class=" col-sm-2"> </div>
-    					<div class=" col-sm-2"> </div>
-    					<div class=" col-sm-2"> </div>
-    					<div class=" col-sm-2">
+    					
+    					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
       						<a href="index.html" class="btn btn-primary"  role="button">Página inicial</a>
-    					</div>
+      					</div>
   					</div>
 				</div>
-
-			    
-	  		</form>
-	  		
+			</form>
 	  	</div>
 	</div>
 	<footer class="section section-primary"> 
