@@ -6,6 +6,7 @@
 		<link rel="stylesheet"  href="bootstrap/css/bootstrap.css">
 		<script src="bootstrap/js/jquery-3.1.1.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="consultarCrimeAjax.js"></script>
 		<title></title>
 	</head>
 	<body> 
@@ -15,7 +16,7 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-sm-6">
-    				<form action="inserirCrimes.php" method="post" accept-charset="utf-8">
+    				<form  method="post" accept-charset="utf-8">
     					<fieldset>
     						<legend>Informações sobre o crime</legend>
   	  						<div class="form-group" id="cidades" class ="hidden" >
@@ -27,7 +28,7 @@
 					    			$sql = "SELECT nomecidades FROM cidades";
 					    			$result = $conn->query($sql);
 					    			$nomecidades = -1;
-					    			echo "<select name='cidade' class='form-control input-sm'>";
+					    			echo "<select name='cidade' id='cidade' class='form-control input-sm'>";
 					    			if ($result->num_rows > 0) {
 					      				while($row = $result->fetch_assoc()) {
 					        			echo "<option value='".$row[nomecidades]."'>";
@@ -110,7 +111,14 @@
 			    						echo '<input  class="form-control input-sm" type="number" min="1" max="10000" class="form-control" name="qtd_vitimas" placeholder="Informe a quantidade de vítimas" >';
 			    					echo '</div>';	
 								}
+
 							?>
+
+							<div id= "resultado">
+								
+							</div>
+
 			<a href="formPreConsultarCrime.php" class="btn btn-primary"  role="button">voltar</a>
+			<input type="button" onclick="buscarCrimes()" class="btn btn-primary">consultar</input>
 	</body>
 </html>
