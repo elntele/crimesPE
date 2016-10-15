@@ -38,7 +38,9 @@
 					    			} 
 					    			$conn->close();
 				    				echo '</select>';
-									}
+									} else{
+			    	    			echo '<div name="cidade" id="cidade" value="null" ></div>';
+			    	    		}
 				   				?>
 			    			</div>
 			    		</fieldset>
@@ -48,7 +50,9 @@
 			    			<?php 
 			    				if (!empty($_POST["nome"])){
 			    					echo '<label class="control-label">Nome</label>';
-			    	    			echo '<input class="form-control input-sm" type="text" name="nome_vitima" placeholder="Informe o nome da vítima">';
+			    	    			echo '<input class="form-control input-sm" type="text" name="nome_vitima" id="nome_vitima" placeholder="Informe o nome da vítima">';
+			    	    		}else{
+			    	    			echo '<div name="nome_vitima" id="nome_vitima" value="null" ></div>';
 			    	    		}
 			    			?>
 			    		</div>
@@ -56,7 +60,9 @@
 			    			<?php 
 			    				if (!empty($_POST["ocorrencia"])){
 			    					echo '<label class="control-label">Data de ocorrência</label>';
-			    	    			echo '<input class="form-control input-sm" type="date" name="data_ocorrencia">';
+			    	    			echo '<input class="form-control input-sm" type="date" name="data_ocorrencia" id="data_ocorrencia">';
+			    	    		}else{
+			    	    			echo '<div name="data_ocorrencia" id="data_ocorrencia" value="null" ></div>';
 			    	    		}
 			    	    	?>
 			    	    </div>
@@ -64,7 +70,9 @@
 			    			<?php 
 			    				if (!empty($_POST["idade"])){
 			    					echo '<label class="control-label">Idade</label>';
-			    	    			echo '<input class="form-control input-sm" type="number" name="idade" placeholder="Informe a idade da vítima">';
+			    	    			echo '<input class="form-control input-sm" type="number" name="idade" id="idade" placeholder="Informe a idade da vítima">';
+			    	    		}else{
+			    	    			echo '<div name="idade" id="idade" value="null" ></div>';
 			    	    		}
 			    	    	?>
 			    	    </div>
@@ -74,43 +82,52 @@
 			     				if (!empty($_POST["sexo"])){	
 			     					echo '<div class="form-group">';
 			     						echo '<label>Sexo</label><br>';	
-				 						echo '<input type="radio" name="sexo" value="masculino" checked> masculino<br>';
-				 						echo '<input type="radio" name="sexo" value="feminino"> feminino<br>';
+				 						echo '<input type="radio" name="sexo" id="sexo" value="masculino" checked> masculino<br>';
+				 						echo '<input type="radio" name="sexo"  id="sexo"value="feminino"> feminino<br>';
 									echo'</div>';
-								}
+								}else{
+			    	    			echo '<div name="sexo" id="sexo" value="null" ></div>';
+			    	    			
+			    	    		}
 							?>
 							<?php
 								if (!empty($_POST["objeto"])){
 									echo'<div class="form-group">';	
 			    						echo'<label class="control-label">Objeto utilizado</label><br> ';
-			    						echo'<select class="form-control input-sm" name="objeto_utilizado" placeholder="Selecione o tipo de arma">';
+			    						echo'<select class="form-control input-sm" name="objeto_utilizado" id="objeto_utilizado" placeholder="Selecione o tipo de arma">';
 					    					echo'<option>ARMA DE FOGO</option >';
 					    					echo'<option>ARMA BRANCA</option >';
 					    					echo'<option>OUTRO TIPO DE OBJETO</option >'; 
 					   					echo'</select>';
 			    					echo '</div>';	
-								}
+								}else{
+			    	    			echo '<div name="objeto_utilizado" id="objeto_utilizado" value="null" ></div>';
+			    	    		}
 			    			?>
 			    			<?php	
 			    				if (!empty($_POST["tipo"])){
 			   						echo'<div class="form-group">';	
 			    						echo'<label class="control-label">Tipo de crime</label>'; 
-			    						echo'<select class="form-control input-sm" name="tipo_crime" placeholder="Selecione o tipo de crime">';
+			    						echo'<select class="form-control input-sm" name="tipo_crime" id="tipo_crime" placeholder="Selecione o tipo de crime">';
 					    					echo'<option>ASSALTO A MÃO ARMADA</option >';
 					    					echo'<option>LATROCÍNIO</option >';
 					    					echo'<option>HOMICIDIO</option > ';
 					   						echo'<option>LESOES CORPORAIS SEGUIDA DE MORTE</option > <br>';
 					    				echo'</select>';
 			    					echo'</div>';
-								}
+								}else{
+			    	    			echo '<div name="tipo_crime" id="tipo_crime" value="null" ></div>';
+			    	    		}
 							?>
 							<?php
 								if(!empty($_POST["vitimas"]))	{
 									echo'<div class="form-group">';
 			    						echo '<label class="control-label">Quantidade de vitimas </label><br>';
-			    						echo '<input  class="form-control input-sm" type="number" min="1" max="10000" class="form-control" name="qtd_vitimas" placeholder="Informe a quantidade de vítimas" >';
+			    						echo '<input  class="form-control input-sm" type="number" min="1" max="10000" class="form-control" name="qtd_vitimas" id="qtd_vitimas" placeholder="Informe a quantidade de vítimas" >';
 			    					echo '</div>';	
-								}
+								}else{
+			    	    			echo '<div name="qtd_vitimas" id="qtd_vitimas" value="null" ></div>';
+			    	    		}
 
 							?>
 

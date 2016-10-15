@@ -10,10 +10,11 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$cidade = $_GET['valor'];
+$stringDeSelecao = $_GET['valor'];
 
-$sql = "select cidade,data_ocorrencia,tipo_crime  FROM crime WHERE cidade LIKE '%".$cidade."%'";
+$sql = "SELECT cidade,data_ocorrencia,idade,nome_vitima,objeto_utilizado,qtd_vitimas,sexo,tipo_crime  FROM crime WHERE cidade LIKE '%".$stringDeSelecao."%'";
 $result = mysqli_query($conn, $sql);
+echo $stringDeSelecao; 
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row

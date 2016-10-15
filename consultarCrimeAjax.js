@@ -12,9 +12,78 @@ else if(window.ActiveXObject) {
 }
  
 // Arquivo PHP juntamente com o valor digitado no campo (método GET)
-var cidade = document.getElementById("cidade").value;
 
-var url = "consultarCrime.php?valor="+cidade;
+var concatenador;
+var array=[];
+var valorRecebido = document.getElementById("cidade").value;
+if (valorRecebido!=null){
+valorRecebido ="cidade LIKE "+"'%"+valorRecebido+"%'";
+array.push(valorRecebido); 
+}
+//alert( "o valor é" + document.getElementById("data_ocorrencia").value)
+
+valorRecebido = document.getElementById("data_ocorrencia").value;
+if (valorRecebido!=null){
+valorRecebido ="data_ocorrencia LIKE '"+valorRecebido+"'";
+array.push(valorRecebido);
+}
+
+
+valorRecebido = document.getElementById("idade").value;
+if (valorRecebido!=null){
+    valorRecebido=valorRecebido ="idade LIKE "+valorRecebido;
+array.push(valorRecebido);
+}
+
+valorRecebido = document.getElementById("nome_vitima").value;
+if (valorRecebido!=null){
+    valorRecebido ="nome_vitima LIKE "+"'%"+valorRecebido+"%'"
+array.push(valorRecebido);
+}
+
+valorRecebido = document.getElementById("objeto_utilizado").value;
+if (valorRecebido!=null){
+    valorRecebido ="objeto_utilizado LIKE "+"'%"+valorRecebido+"%'";
+array.push(valorRecebido);
+}
+
+valorRecebido = document.getElementById("qtd_vitimas").value;
+if (valorRecebido!=null){
+    valorRecebido ="qtd_vitimas LIKE "+valorRecebido;
+array.push(valorRecebido);
+}
+
+valorRecebido = document.getElementById("sexo").value;
+if (valorRecebido!=null){
+    valorRecebido ="sexo LIKE "+"'%"+valorRecebido+"%'";
+array.push(valorRecebido);
+}
+
+
+valorRecebido = document.getElementById("tipo_crime").value;
+if (valorRecebido!=null){
+    valorRecebido ="tipo_crime LIKE "+"'%"+valorRecebido+"%'";
+array.push(valorRecebido);
+}
+i=0;
+
+while (i<array.length){
+if (i==0){
+    concatenador= array[i]
+}
+else{
+    concatenador=concatenador+array[i];
+}
+
+if (i!=array.length-1){
+        concatenador+=" and ";
+
+    }
+i+=1;
+}
+alert(concatenador);
+
+var url = "consultarCrime.php?valor="+concatenador;
  
 // Chamada do método open para processar a requisição
 req.open("Get", url, true);
