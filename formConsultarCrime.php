@@ -7,6 +7,15 @@
 		<script src="bootstrap/js/jquery-3.1.1.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
 		<script type="text/javascript" src="consultarCrimeAjax.js"></script>
+
+		<script>
+			
+			function toUpper(input) {
+				// body...
+				input.value = input.value.toUpperCase();
+			}
+
+		</script>
 		<title></title>
 	</head>
 	<body> 
@@ -48,9 +57,10 @@
 			    <!--########################-->	
 			     		<div class= "form-group">
 			    			<?php 
-			    				if (!empty($_POST["nome"])){
+			    				$strPost = strtoupper('$_POST["nome"]');
+			    				if (!empty($strPost)){
 			    					echo '<label class="control-label">Nome</label>';
-			    	    			echo '<input class="form-control input-sm" type="text" name="nome_vitima" id="nome_vitima" placeholder="Informe o nome da vítima">';
+			    	    			echo '<input class="form-control input-sm" type="text" name="nome_vitima" id="nome_vitima" onkeyup="toUpper(this)" placeholder="Informe o nome da vítima">';
 			    	    		}else{
 			    	    			echo '<div name="nome_vitima" id="nome_vitima" value="null" ></div>';
 			    	    		}
@@ -82,8 +92,8 @@
 			     				if (!empty($_POST["sexo"])){	
 			     					echo '<div class="form-group">';
 			     						echo '<label>Sexo</label><br>';	
-				 						echo '<input type="radio" name="sexo" id="sexo" value="masculino" checked> masculino<br>';
-				 						echo '<input type="radio" name="sexo"  id="sexo"value="feminino"> feminino<br>';
+				 						echo '<input type="radio" name="sexo" id="sexo" value="MASCULINO" checked> masculino<br>';
+				 						echo '<input type="radio" name="sexo"  id="sexo"value="FEMININO"> feminino<br>';
 									echo'</div>';
 								}else{
 			    	    			echo '<div name="sexo" id="sexo" value="null" ></div>';
@@ -109,8 +119,8 @@
 			   						echo'<div class="form-group">';	
 			    						echo'<label class="control-label">Tipo de crime</label>'; 
 			    						echo'<select class="form-control input-sm" name="tipo_crime" id="tipo_crime" placeholder="Selecione o tipo de crime">';
-					    					echo'<option>ASSALTO A MÃO ARMADA</option >';
-					    					echo'<option>LATROCÍNIO</option >';
+					    					echo'<option>ASSALTO A MAO ARMADA</option >';
+					    					echo'<option>LATROCINIO</option >';
 					    					echo'<option>HOMICIDIO</option > ';
 					   						echo'<option>LESOES CORPORAIS SEGUIDA DE MORTE</option > <br>';
 					    				echo'</select>';
@@ -136,6 +146,6 @@
 							</div>
 
 			<a href="formPreConsultarCrime.php" class="btn btn-primary"  role="button">voltar</a>
-			<input type="button" onclick="buscarCrimes()" class="btn btn-primary">consultar</input>
+			<input type="button" onclick="buscarCrimes()" class="btn btn-primary">Consultar</input>
 	</body>
 </html>

@@ -17,7 +17,7 @@ var concatenador;
 var array=[];
 var valorRecebido = document.getElementById("cidade").value;
 if (valorRecebido!=null){
-valorRecebido ="cidade LIKE "+"'%"+valorRecebido+"%'";
+valorRecebido ="cidade LIKE "+ '"%"'+"'"+valorRecebido+"%'";
 array.push(valorRecebido); 
 }
 //alert( "o valor é" + document.getElementById("data_ocorrencia").value)
