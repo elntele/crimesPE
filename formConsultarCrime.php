@@ -57,8 +57,8 @@
 			    <!--########################-->	
 			     		<div class= "form-group">
 			    			<?php 
-			    				$strPost = strtoupper('$_POST["nome"]');
-			    				if (!empty($strPost)){
+			    				//$strPost = strtoupper('$_POST["nome"]');
+			    				if (!empty($_POST["nome"])){
 			    					echo '<label class="control-label">Nome</label>';
 			    	    			echo '<input class="form-control input-sm" type="text" name="nome_vitima" id="nome_vitima" onkeyup="toUpper(this)" placeholder="Informe o nome da vítima">';
 			    	    		}else{
@@ -146,6 +146,7 @@
 							</div>
 
 			<a href="formPreConsultarCrime.php" class="btn btn-primary"  role="button">voltar</a>
-			<input type="button" onclick="buscarCrimes()" class="btn btn-primary">Consultar</input>
+			<!--<input type="button" onclick="buscarCrimes()" class="btn btn-primary">Consultar</input>-->
+			<button  onclick="buscarCrimes()" class="btn btn-primary">Submit</button>
 	</body>
 </html>
