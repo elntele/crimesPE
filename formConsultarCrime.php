@@ -7,6 +7,7 @@
 		<script src="bootstrap/js/jquery-3.1.1.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
 		<script type="text/javascript" src="consultarCrimeAjax.js"></script>
+		<script src="bootstrap/js/validator.js"></script>
 
 		<script>
 			
@@ -147,6 +148,6 @@
 
 			<a href="formPreConsultarCrime.php" class="btn btn-primary"  role="button">voltar</a>
 			<!--<input type="button" onclick="buscarCrimes()" class="btn btn-primary">Consultar</input>-->
-			<button  onclick="buscarCrimes()" class="btn btn-primary">Submit</button>
+			<button  onclick="buscarCrimes()" class="btn btn-primary">Buscar</button>
 	</body>
 </html>

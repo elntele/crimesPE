@@ -7,6 +7,16 @@
 		<script src="bootstrap/js/jquery-3.1.1.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
 		<script src="bootstrap/js/validator.js"></script>
+		
+		<script>
+			
+			function toUpper(input) {
+				// body...
+				input.value = input.value.toUpperCase();
+			}
+
+		</script>
+		
 		<title></title>
 	</head>
 	<body>
@@ -54,7 +64,7 @@
 
 			     			<div class="form-group has-feedback">	
 			    				<label>Nome</label>
-			    				<input type="text"  class="form-control input-sm" name="nome_vitima" placeholder="Informe o nome completo da vítima" data-error="Preencha este campo*" required>
+			    				<input type="text"  class="form-control input-sm" name="nome_vitima" placeholder="Informe o nome completo da vítima" data-error="Preencha este campo*" required onkeyup="toUpper(this)">
 			    				<div class="help-block with-errors"></div>
 			    			</div>	
 
