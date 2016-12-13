@@ -17,5 +17,5 @@ $sql = "INSERT INTO crime (cidade, data_ocorrencia, idade, nome_vitima, objeto_u
 VALUES ('$_POST[cidade]', '$_POST[data_ocorrencia]', '$_POST[idade]', '$_POST[nome_vitima]', '$_POST[objeto_utilizado]', '$_POST[qtd_vitimas]', '$_POST[sexo]', '$_POST[tipo_crime]')";
 $conn->query($sql); 
 $conn->close();
-//header('Location: index.html');
+header('Location: index.html');
 ?>

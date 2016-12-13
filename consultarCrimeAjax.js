@@ -20,7 +20,7 @@ if (valorRecebido!=null){
 valorRecebido ="cidade LIKE "+ '"%"'+"'"+valorRecebido+"%'";
 array.push(valorRecebido); 
 }
-//alert( "o valor é" + document.getElementById("data_ocorrencia").value)
+
 
 valorRecebido = document.getElementById("data_ocorrencia").value;
 if (valorRecebido!=null){
@@ -81,7 +81,7 @@ if (i!=array.length-1){
     }
 i+=1;
 }
-alert(concatenador);
+
 
 var url = "consultarCrime.php?valor="+concatenador;
  
