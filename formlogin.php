@@ -21,7 +21,7 @@
 	</head>
 	<body> 
 		<div class="page-header text-center">
-    		<h2>INFORME USUÁRIO E SENHA</h2>
+    		<h2>Informe o usuário e senha</h2>
     	</div>
     	<div class="container">
     		<div class="row">
@@ -45,31 +45,29 @@
 
 			     		<div class= "form-group"  >
 			    			
-			    				<form method="post" action="login.php" id="formlogin" name="formlogin">
+			    			<form method="post" action="login.php" id="formlogin" name="formlogin">
 			    				<fieldset id="fie">
-			    					<legend>LOGIN</legend><br />
-			    					<label class="control-label">USUÁRIO</label>
-			    	    			<input class="form-control input-sm" type="text" name="nome_usuario" id="nome_usuario" placeholder="Informe o nome do usuário">
-			    	    		
-			    					<label class="control-label">SENHA</label>
-			    					<br>
-			    	    			<input class="form-control input-sm" type="password" name="senha" id="senha" placeholder="Informe a sua senha">
-			    	    			<input type="submit" value="Logar"/>
-			    	    			<br>	
-			    	    			<a href="formPreConsultarCrime.php" class="btn btn-primary"  role="button">voltar</a>
-
+			    					<legend>Login</legend>
+			    					<div class="form-group">
+			    						<label class="control-label">Usuário</label>
+			    	    				<input class="form-control input-sm" type="text" name="nome_usuario" id="nome_usuario" placeholder="Informe o nome do usuário">
+			    	    			</div>	
+			    	    			<div class="form-group">
+			    						<label class="control-label">Senha</label>
+			    						<input class="form-control input-sm" type="password" name="senha" id="senha" placeholder="Informe a sua senha">
+			    	    			</div>
+			    	    			<div>
+			    	    				<a href="index.html" class="btn btn-primary" role="button">Voltar</a>
+			    	    				<button type="submit" class="btn btn-primary">Logar</button>
+			    	    			</div>
+			    	    			
 									<!--<input type="button" onclick="buscarCrimes()" class="btn btn-primary">Consultar</input>
 									<button  onclick="buscarCrimes()" class="btn btn-primary">Entrar</button>	-->
-			    			
+			    				</fieldset>
+			    			</form>
+			    		</div>
 
-			    	    		</form>
-			    			</fieldset>
-
-			    			</div>
-
-							<div id= "resultado">
-								
-							</div>
+						<div id= "resultado"></div>
 
 			
 	</body>

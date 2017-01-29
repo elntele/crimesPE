@@ -27,11 +27,11 @@ if(mysqli_num_rows ($result) > 0 ) {
   header('location:formPreConsultarCrime.php');
 }
 else{
-  /*
+  
   unset ($_SESSION['login']);
   unset ($_SESSION['senha']);
   header('location:formConsultarCrime.php');
-  */
+  
 }
 
 ?>
