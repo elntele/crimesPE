@@ -13,8 +13,8 @@ if ($conn->connect_error) {
 
 
  //Outra forma de escrever
-$sql = "INSERT INTO crime (cidade, data_ocorrencia, idade, nome_vitima, objeto_utilizado, qtd_vitimas, sexo,tipo_crime)
-VALUES ('$_POST[cidade]', '$_POST[data_ocorrencia]', '$_POST[idade]', '$_POST[nome_vitima]', '$_POST[objeto_utilizado]', '$_POST[qtd_vitimas]', '$_POST[sexo]', '$_POST[tipo_crime]')";
+$sql = "INSERT INTO crime (cidade, data_ocorrencia, idade, nome_vitima, objeto_utilizado, qtd_vitimas, sexo,tipo_crime,status)
+VALUES ('$_POST[cidade]', '$_POST[data_ocorrencia]', '$_POST[idade]', '$_POST[nome_vitima]', '$_POST[objeto_utilizado]', '$_POST[qtd_vitimas]', '$_POST[sexo]', '$_POST[tipo_crime]','SOBRE INVESTIGAÇÃO')";
 $conn->query($sql); 
 $conn->close();
 header('Location: index.html');
