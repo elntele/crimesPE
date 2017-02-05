@@ -24,13 +24,13 @@ $result = mysqli_query($conn, "SELECT * FROM usuario WHERE usuario = '$login' AN
 if(mysqli_num_rows ($result) > 0 ) {
   $_SESSION['login'] = $login;
   $_SESSION['senha'] = $senha;
-  header('location:formPreConsultarCrime.php');
+  header('location:formPreAlterarStatusCrime.php');
 }
 else{
   
   unset ($_SESSION['login']);
   unset ($_SESSION['senha']);
-  header('location:formConsultarCrime.php');
+  header('location:falhaNoLogin.html');
   
 }
 
