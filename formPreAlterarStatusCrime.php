@@ -68,11 +68,11 @@ $logado = $_SESSION['login'];
 			    <div class="container">
   					<div class="row">
     					<div class="col-lg-1 col-md-1 col-sm-2 col-xs-1 text-left"> 
-      						<input type="submit" value="Continuar" class="btn btn-primary">
+      						<button type="submit" class="btn btn-primary">Continuar</button>
     					</div>
     					
     					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-      						<a href="matarSessao.php" class="btn btn-primary"  role="button">sair</a>
+      					<a href="matarSessao.php" class="btn btn-primary"  role="button">Sair</a>
       					</div>
   					</div>
 				</div>

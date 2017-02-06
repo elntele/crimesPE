@@ -52,11 +52,11 @@
 			    <div class="container">
   					<div class="row">
     					<div class="col-lg-1 col-md-1 col-sm-2 col-xs-1 text-left"> 
-      						<input type="submit" value="Continuar" class="btn btn-primary">
+      						<button type="submit" class="btn btn-primary">Continuar</button> 
     					</div>
     					
     					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-      						<a href="index.html" class="btn btn-primary"  role="button">Página inicial</a>
+      						<a href="index.html" class="btn btn-primary"  role="button">Página Inicial</a>
       					</div>
   					</div>
 				</div>
@@ -67,7 +67,7 @@
 		<div class="container"> 
 			<div class="row"> 
 				<div class="col-sm-6"> 
-					<h1>Sistema de denúncia de crimes</h1> 
+					<h1>Sistema para denúncia de crimes</h1> 
 					<p>Todos os direitos reservados</p>
 				</div>
 				<div class="col-sm-6"> <p class="text-info text-right"> <br><br></p>

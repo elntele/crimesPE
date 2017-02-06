@@ -146,7 +146,7 @@
 								
 							</div>
 
-			<a href="formPreConsultarCrime.php" class="btn btn-primary"  role="button">voltar</a>
+			<a href="formPreConsultarCrime.php" class="btn btn-primary"  role="button">Voltar</a>
 			<!--<input type="button" onclick="buscarCrimes()" class="btn btn-primary">Consultar</input>-->
 			<button  onclick="buscarCrimes()" class="btn btn-primary">Buscar</button>
 	</body>
