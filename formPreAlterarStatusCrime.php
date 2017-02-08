@@ -64,6 +64,9 @@ $logado = $_SESSION['login'];
 			    <div class="checkbox">
 			      <label><input type="checkbox" value="qtd_vitima" name="vitimas">Consultar por quantidade de vítimas</label>
 			    </div>
+			     <div class="checkbox">
+			      <label><input type="checkbox" value="status" name="status">Consultar por status do crime</label>
+			    </div>
 			    
 			    <div class="container">
   					<div class="row">
@@ -131,11 +134,13 @@ $logado = $_SESSION['login'];
 				vetor.push(checkbox7);
 				var checkbox8 = document.form.vitimas.checked;
 				vetor.push(checkbox8);
+				var checkbox9 = document.form.status.checked;
+				vetor.push(checkbox9);
 				var chavecheckbox= false;
 				
 				
 				
-				for (i=0;i<=8;i++){
+				for (i=0;i<=9;i++){
 
 						if(vetor[i]){
 								chavecheckbox=true;

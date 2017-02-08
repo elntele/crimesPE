@@ -71,6 +71,12 @@ if (valorRecebido!=null){
     valorRecebido ="tipo_crime LIKE "+"'%"+valorRecebido+"%'";
 array.push(valorRecebido);
 }
+valorRecebido = document.getElementById("status").value;
+if (valorRecebido!=null){
+    valorRecebido ="status LIKE "+"'%"+valorRecebido+"%'";
+array.push(valorRecebido);
+}
+
 i=0;
 
 while (i<array.length){

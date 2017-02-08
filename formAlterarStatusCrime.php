@@ -7,6 +7,7 @@
 		<script src="bootstrap/js/jquery-3.1.1.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
 		<script type="text/javascript" src="alterarStatusCrimeAjax.js"></script>
+		<script type="text/javascript" src="alterarStatusCrimeRespostaAjax.js"></script>
 		<script src="bootstrap/js/validator.js"></script>
 
 		<script>
@@ -156,7 +157,20 @@
 			    	    		}
 
 							?>
-
+							<?php	
+			    				if (!empty($_POST["status"])){
+			   						echo'<div class="form-group">';	
+			    						echo'<label class="control-label">Status do crime</label>'; 
+			    						echo'<select class="form-control input-sm" name="status" id="status" placeholder="Selecione o tipo de crime">';
+					    					echo'<option>SOBRE INVESTIGAÇÃO </option >';
+					    					echo'<option>AVERIGUADO</option >';
+					    					echo'<option>ARQUIVADO</option > ';
+					   					echo'</select>';
+			    					echo'</div>';
+								}else{
+			    	    			echo '<div name="status" id="status" value="null" ></div>';
+			    	    		}
+							?>
 							<div id= "resultado">
 								
 							</div>
@@ -167,7 +181,10 @@
 
 
 			<form action="alterarStatusCrime.php" method="post" accept-charset="utf-8" data-toggle="validator" role="form">
-				<br>	
+				<br>
+				<div id= "resultadoAlterar">
+								
+				</div>	
 
 				<fieldset>
     						<legend>Campo de UpDate de status do crime </legend>
@@ -190,7 +207,7 @@
 		    		<div class="help-block with-errors"></div>
 		        </div>	
 		        <div>
-			    	<button type="submit" class="btn btn-primary">Update</button>
+			    	<button  type="submit" class="btn btn-primary">Update</button>
       				<a href="matarSessao.php" class="btn btn-primary"  role="button">sair</a>
       			</div>
 			</form>
