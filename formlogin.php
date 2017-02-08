@@ -66,8 +66,11 @@
 			    				</fieldset>
 			    			</form>
 			    		</div>
+			    		<div id= "resultado"></div>
 
-						<div id= "resultado"></div>
+			    		<!-- Div criada para adição do modalLogin -->
+
+
 
 			
 	</body>

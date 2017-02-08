@@ -108,7 +108,9 @@
 					        	<div class="help-block with-errors"></div>
 			    			</div>
 			    			<div>
+			    				<a href="index.html" class="btn btn-primary" role="button">Voltar</a>
 			    				<button type="submit" class="btn btn-primary">Enviar</button>
+			    				
 			    			</div>
 			    			<br>
 			    		</fieldset>

@@ -22,7 +22,7 @@
 	</head>
 	<body> 
 		<div class="page-header text-center">
-    		<h2>Alterar crimes</h2>
+    		<h2>Alterar Crimes</h2>
     	</div>
     	<div class="container">
     		<div class="row">
@@ -176,7 +176,7 @@
 							</div>
 				</form>
 			
-			<a href="formPreAlterarStatusCrime.php" class="btn btn-primary"  role="button">voltar</a>
+			<a href="formPreAlterarStatusCrime.php" class="btn btn-primary"  role="button">Voltar</a>
 			<button  onclick="buscarCrimesOficial()" class="btn btn-primary">Buscar</button>
 
 
@@ -187,7 +187,7 @@
 				</div>	
 
 				<fieldset>
-    						<legend>Campo de UpDate de status do crime </legend>
+    						<legend>Formulário para alteração do status do crime </legend>
 
 				<div class="form-group has-feedback">	
     				<br>
@@ -197,7 +197,7 @@
     			</div>	
     			<div class="form-group has-feedback">
     					
-    				<label>Selecione o nome status</label><br> 
+    				<label>Selecione o status</label><br> 
     				<select class="form-control input-sm" name="Status" data-error="Selecione o novo status*" required>
     					<option></option>
 		    			<option>AVERIGUADO</option >
